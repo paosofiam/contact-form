@@ -18,22 +18,22 @@
         <h1>Contact me!</h1>
         <label for="formName" class="formElement">
             <span class="inputSpan">Contact name</span>
-            <input id="formName" class="inputBox" type="text" autocomplete="name" placeholder="Your name here">  
+            <input id="formName" name="formName" class="inputBox" type="text" autocomplete="name" placeholder="Your name here">  
         </label>
         <label for="formMail" class="formElement">
             <span class="inputSpan">Email</span>
             <div id="emailSection">
-                <input id="formMail" class="inputBox" type="email:valid" autocomplete="email" placeholder="example@domain.com">
+                <input id="formMail" name="formMail" class="inputBox" type="email:valid" autocomplete="email" placeholder="example@domain.com">
                 <span id="emailValidation" class="validations">Please enter a valid email.</span>
             </div>
         </label>
         <label for="formSubject" class="formElement">
             <span class="inputSpan">Subject</span>
-            <input id="formSubject" class="inputBox" type="text" placeholder="Your subject here">
+            <input id="formSubject" name="formSubject" class="inputBox" type="text" placeholder="Your subject here">
         </label>
         <label for="formMessage" class="formElement">
             <span class="inputSpan">Your message</span>
-            <textarea name="" id="formMessage" class="inputBox" cols="30" rows="10" placeholder="Tell me How I can help you!"></textarea> 
+            <textarea name="formMessage" id="formMessage" class="inputBox" cols="30" rows="10" placeholder="Tell me How I can help you!"></textarea> 
         </label>
         <button type="submit">Submit</button>
         <span id="fieldsValidation" class="validations">Please fill al the fields first</span>
