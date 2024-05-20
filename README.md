@@ -9,6 +9,9 @@ Este es un proyecto realizado con HTML, CSS y PHP.
 Puedes visualizarlo en la siguiente liga:
 [Demo by Paola Mendoza](https://paosofiam-tests.000webhostapp.com/)
 
+También puedes ver el diseño original en la siguiente liga:
+[Frontend Mentor | Contact form](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj)
+
 # Acerca de mí
 Entusiasta de la ciencia y la tecnología, soy una profesional técnica, creativa, comprometida y proactiva, además de una persona empática, social y responsable. A pesar de haberme formado como Ingeniera Aeronáutica, actualmente me desempeño como Desarrolladora Web Jr, y me enfoco en el diseño web.
 
