@@ -112,7 +112,8 @@ input[type=checkbox].formCard__input--check:checked{
     content: "";
     height: 18px;
     width: 18px;
-    background-image: url("/assets/images/icon-checkbox-check.svg");
+    /*background-image: url("/assets/images/icon-checkbox-check.svg");*/
+    background-image: url("../images/icon-checkbox-check.svg");
     background-size: cover;
 }
 /*Submit Button*/
