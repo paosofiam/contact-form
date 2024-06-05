@@ -1,8 +1,8 @@
 <?php 
-    //$_post = json_decode(file_get_contents('php://input'),true);
+    $_post = json_decode(file_get_contents('php://input'),true);
 
     $theData = $_post;
-	var_dump($theData);
+	//var_dump($theData);
 	sendEmail($theData);
 	/*header('location: gracias.html');*/
     function sendEmail($theData){
