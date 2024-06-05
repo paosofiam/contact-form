@@ -9,7 +9,7 @@
 		/*$emailCC = $_post['email'];*/
 		$to = $theData['eMail'];
 		$subject = 'paosofiam.com Mailer PHP - Frontend Mentor Contact Form';
-		$message = "¡Thanks for viewing my portfolio!. You submitted the next info: <b>MASTER, CONTROL
+		$message = "¡Thanks for viewing my portfolio! You submitted the next info: <b>MASTER, CONTROL
         & HARMONIZE DATA</b>";
 		$message .= "<ul><li>Your full name: ";
 		$message .= $theData['firstName'];
