@@ -28,12 +28,13 @@
 		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 		$headers .= 'From: Paola Sofia Mendoza <noreply@gmail.com>' . "\r\n";
 		/*$headers .= "Cc: $emailCC" . "\r\n";*/
-		$submitted = mail($to,$subject,$message,$headers);
+		mail($to,$subject,$message,$headers);
+		/*$submitted = 
 		if($submitted){
 			echo 'Email Submitted';
 		}
 		else{
 			echo error_get_last()['message'];
-		}
+		}*/
     }
 ?>
