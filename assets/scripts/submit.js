@@ -13,7 +13,7 @@ function submitRoutine(){
 function submitMail(postData){
     console.log('datos', postData);
 
-    fetch("assets/scripts/mailer.php",{
+    fetch("https://paosofiam.com/portfolio/contact-form-mailer/assets/scripts/mailer.php",{
         method: "POST",
         headers: {
             'Accept': 'application/json',
