@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact me!</title>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/icons/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="config.css" >
-    <link rel="stylesheet" href="styles.css" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/styles/config.css">
+  <link rel="stylesheet" href="assets/styles/styles.css">
+  <title>Frontend Mentor | Contact form</title>
 </head>
 <body>
-    <form id="formBox" action="submit.php" method="POST">
-        <h1>Contact me!</h1>
-        <label for="formName" class="formElement">
-            <span class="inputSpan">Contact name</span>
-            <input id="formName" name="formName" class="inputBox" type="text" autocomplete="name" placeholder="Your name here">  
+  <main id="componentBackground">
+    <form id="formCard" action="">
+      <h1 id="title" class="formCard__field--fullLenght">Contact Us</h1>
+      <label class="formCard__field" for="firstName">
+        <span class="formCard__tag">First Name<span class="formCard__required">*</span></span>
+        <input id="firstName" class="formCard__input" type="text" autocomplete="first-name" oninput="rejectTextField('firstName')">
+        <span class="formCard__validation">This field is required</span>
+      </label>
+      <label class="formCard__field" for="lastName">
+        <span class="formCard__tag">Last Name<span class="formCard__required">*</span></span>
+        <input id="lastName" class="formCard__input" type="text" autocomplete="last-name" oninput="rejectTextField('lastName')">
+        <span class="formCard__validation">This field is required</span>
+      </label>
+      <label class="formCard__field formCard__field--fullLenght" for="eMail">
+        <span class="formCard__tag">Email Address<span class="formCard__required">*</span></span>
+        <input id="eMail" class="formCard__input" type="email" autocomplete="email" oninput="rejectEmail('eMail')">
+        <span class="formCard__validation">This field is required</span><span class="formCard__validation--email">Please enter a valid email address</span>
+      </label>
+      <div id="queryType" class="formCard__field formCard__field--fullLenght formCard__field--QueryType">
+        <span class="formCard__tag formCard__field--fullLenght">Query Type<span class="formCard__required">*</span></span>
+        <label for="generalEnquiry" id="General_Enquiry" class="formCard__option" onclick="checkRadioBox()">
+          <input type="radio" id="generalEnquiry" class="formCard__input--radio" name="queryType" value="General_Enquiry"/>
+          <span>General Enquiry</span>
         </label>
-        <label for="formMail" class="formElement">
-            <span class="inputSpan">Email</span>
-            <div id="emailSection">
-                <input id="formMail" name="formMail" class="inputBox" type="email:valid" autocomplete="email" placeholder="example@domain.com">
-                <span id="emailValidation" class="validations">Please enter a valid email.</span>
-            </div>
+        <label for="supportRequest" id="Support_Request" class="formCard__option" onclick="checkRadioBox()">
+          <input type="radio" id="supportRequest" class="formCard__input--radio" name="queryType" value="Support_Request"/>
+          <span>Support Request</span>
         </label>
-        <label for="formSubject" class="formElement">
-            <span class="inputSpan">Subject</span>
-            <input id="formSubject" name="formSubject" class="inputBox" type="text" placeholder="Your subject here">
-        </label>
-        <label for="formMessage" class="formElement">
-            <span class="inputSpan">Your message</span>
-            <textarea name="formMessage" id="formMessage" class="inputBox" cols="30" rows="10" placeholder="Tell me How I can help you!"></textarea> 
-        </label>
-        <button type="submit">Submit</button>
-        <span id="fieldsValidation" class="validations">Please fill al the fields first</span>
+        <span class="formCard__validation">Please select a query type</span>
+      </div>
+      <label class="formCard__field formCard__field--fullLenght" for="mMessage">
+        <span class="formCard__tag">Message<span class="formCard__required">*</span></span>
+        <textarea name="" id="mMessage" class="formCard__input formCard__input--message" oninput="rejectTextField('mMessage')"></textarea>
+        <span class="formCard__validation">This field is required</span>
+      </label>
+      <label class="formCard__field formCard__field--fullLenght" for="consentCheck">
+        <div class="formCard__field--check">
+          <input type="checkbox" id="consentCheck" class="formCard__input--check" name=""/>
+          <span>I consent to being contacted by the team<span class="formCard__required">*</span></span>
+        </div>
+        <span class="formCard__validation">To submit this form, please consent to being contacted<span class="formCard__required">*</span></span>
+      </label>
+      <button type="button" class="formCard__submitButton formCard__field--fullLenght" onclick="submitRoutine()">Submit</button>
     </form>
-    <script src="script.js"></script>
+    <div style="display: none;">
+      <h2>Message Sent!</h2>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </main>  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script>
+    function checkRadioBox(){
+      var uncheck = document.querySelector('.formCard__option--checked');
+      if(uncheck !== null){
+        uncheck.classList.remove('formCard__option--checked');
+      }
+      var checkedRadio = document.querySelector('input[name="queryType"]:checked');
+      if(checkedRadio !== null){
+        checkedRadio = document.querySelector('input[name="queryType"]:checked').value;
+        var checkedContainer = document.querySelector('label#'+checkedRadio);
+        checkedContainer.classList.add('formCard__option--checked');
+      }
+    }
+  </script>
+  <script src="assets/scripts/validations.js"></script>
+  <script src="assets/scripts/submit.js"></script>
 </body>
 </html>

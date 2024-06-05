@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/*.karla-<uniquifier> {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+:root{
+    --Mobile: 375px;
+    --Desktop: 1440px;
+    /*Colors*
+        /*Primary*/
+    --Green200: hsl(148, 38%, 91%);
+    --Green600: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+        /*Neutral*/
+    --White: hsl(0, 0%, 100%);
+    --Grey500: hsl(186, 15%, 59%);
+    --Grey900: hsl(187, 24%, 22%);
+    /*Typography*/
+    --FFKarla: "Karla", sans-serif;;
+    --FS: 16px;
+    --FW1: 400;
+    --FW2: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--FFKarla);
+    color: var(--Grey900);
+}
+
+input, textarea, span, button{
+    font-size: var(--FS);
+}
+input, textarea{
+    border: solid 1px var(--Grey900);
+}
+label, label input, label textarea{
+    cursor: pointer;
+}
