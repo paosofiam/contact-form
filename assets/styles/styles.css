@@ -79,7 +79,7 @@ input[type=radio].formCard__input--radio:checked{
     content: "";
     height: 18px;
     width: 18px;
-    background-image: url("/assets/images/icon-radio-selected.svg");
+    background-image: url("../images/icon-radio-selected.svg");
     background-size: cover;
 }
 .formCard__option--checked{
