@@ -11,6 +11,8 @@ function submitRoutine(){
 }
 
 function submitMail(postData){
+    console.log('datos', postData);
+
     fetch("assets/scripts/mailer.php",{
         method: "POST",
         headers: {
@@ -20,7 +22,7 @@ function submitMail(postData){
         body: postData,
     }).then(function(data){
     }).then(myJson => { 
-     console.log(myJson);
+     console.log("hola",myJson);
      return data;
     }).catch(function(error){/**/})
 }

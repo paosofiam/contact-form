@@ -41,6 +41,6 @@ input, textarea, span, button{
 input, textarea{
     border: solid 1px var(--Grey900);
 }
-label, label input, label textarea{
+label, label input, label textarea, button{
     cursor: pointer;
 }
