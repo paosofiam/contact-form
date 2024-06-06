@@ -3,10 +3,6 @@ function submitRoutine(){
     if(messageIsValid){
         data = readValues();
         submitMail(data);
-        modalSuccess();
-    }
-    else{
-        console.log('Error: Invalid Data');
     }
 }
 
@@ -26,8 +22,6 @@ function showModal(ID){
 }
 
 function submitMail(postData){
-    console.log('datos', postData);
-
     fetch("https://paosofiam.com/portfolio/contact-form-mailer/assets/scripts/mailer.php",{
         method: "POST",
         headers: {
@@ -38,10 +32,10 @@ function submitMail(postData){
     }).then(function(data){
         console.log(data);
         if(data.ok){
-            console.log('todo bien pues');
+            modalSuccess();
         }
         else{
-            console.log('híjole, yo creo que no se va a poder');
+            console.log('Error: '+data.status);
         }
     }).then(myJson => { 
      //console.log("var myJson: ",myJson);

@@ -3,7 +3,17 @@
 
     $theData = $_post;
 	//var_dump($theData);
-	sendEmail($theData);
+
+	validateData($theData);
+
+	function validateData($theData){
+		if($theData['firstName'] != '' && $theData['lastName'] != '' && $theData['eMail'] != '' && $theData['queryType'] != '' && $theData['mMessage'] != '' && $theData['consentCheck'] == 1){
+			sendEmail($theData);
+		}
+		else{
+			echo 'Error Invalid Data';
+		}
+	}
 
     function sendEmail($theData){
 		$to = $theData['eMail'];
@@ -27,12 +37,12 @@
 		$headers .= 'From: Paola Sofia Mendoza <noreply@gmail.com>' . "\r\n";
 		$headers .= "Cc: hello@paosofiam.com" . "\r\n";
 
-		mail($to,$subject,$message,$headers);
-		/*if($submitted){
+		$submitted = mail($to,$subject,$message,$headers);
+		if($submitted){
 			echo 'Email Submitted';
 		}
 		else{
 			echo error_get_last()['message'];
-		} */
+		}
     }
 ?>
