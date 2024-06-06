@@ -3,11 +3,26 @@ function submitRoutine(){
     if(messageIsValid){
         data = readValues();
         submitMail(data);
-        console.log('submitted');
+        modalSuccess();
     }
     else{
         console.log('Error: Invalid Data');
     }
+}
+
+function modalSuccess(){
+    showModal('successModal');
+    setTimeout(() => {
+        window.location.reload();
+      }, "3000");
+}
+
+function showModal(ID){
+    element = document.getElementById(ID);
+    element.style.display = 'flex';
+    setTimeout(() => {
+        element.style.opacity = '1';;
+      }, "250");
 }
 
 function submitMail(postData){
@@ -21,8 +36,9 @@ function submitMail(postData){
     },
         body: postData,
     }).then(function(data){
+        console.log(data);
     }).then(myJson => { 
-     console.log("hola",myJson);
+     //console.log("var myJson: ",myJson);
      return data;
     }).catch(function(error){/**/})
 }

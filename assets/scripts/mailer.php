@@ -4,13 +4,11 @@
     $theData = $_post;
 	//var_dump($theData);
 	sendEmail($theData);
-	/*header('location: gracias.html');*/
+
     function sendEmail($theData){
-		/*$emailCC = $_post['email'];*/
 		$to = $theData['eMail'];
 		$subject = 'paosofiam.com Mailer PHP - Frontend Mentor Contact Form';
-		$message = "¡Thanks for viewing my portfolio! You submitted the next info: <b>MASTER, CONTROL
-        & HARMONIZE DATA</b>";
+		$message = "¡Thanks for viewing my portfolio! You submitted the next info: <b>MASTER, CONTROL & HARMONIZE DATA</b>";
 		$message .= "<ul><li>Your full name: ";
 		$message .= $theData['firstName'];
 		$message .= " ";
@@ -27,14 +25,14 @@
 		$headers = "MIME-Version: 1.0" . "\r\n";
 		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 		$headers .= 'From: Paola Sofia Mendoza <noreply@gmail.com>' . "\r\n";
-		/*$headers .= "Cc: $emailCC" . "\r\n";*/
-		mail($to,$subject,$message,$headers);
-		/*$submitted = 
+		$headers .= "Cc: hello@paosofiam.com" . "\r\n";
+		
+		$submitted = mail($to,$subject,$message,$headers);
 		if($submitted){
 			echo 'Email Submitted';
 		}
 		else{
 			echo error_get_last()['message'];
-		}*/
+		}
     }
 ?>

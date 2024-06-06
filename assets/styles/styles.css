@@ -127,7 +127,45 @@ input[type=checkbox].formCard__input--check:checked{
 .formCard__submitButton:active{
     background-color: var(--Grey900);
 }
+/*Success Modal*/
+#successModal{
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 250ms all ease-in-out;
+}
+.successModal__card{
+    background-color: var(--Grey900);
+    border-radius: 10px;
+    padding: 20px;
+}
+.successModal__title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    color: var(--White);
+}
+.successModal__message{
+    color: var(--White);
+    margin-top: 10px;
+}
+.successModal__title::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/icon-success-check.svg');
+    background-size: cover;
+    margin-right: 10px;
+}
 
+ 
 /*Feel free to remove these styles or customise in your own stylesheet 👍*/
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
