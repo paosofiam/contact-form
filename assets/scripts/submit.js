@@ -37,6 +37,12 @@ function submitMail(postData){
         body: postData,
     }).then(function(data){
         console.log(data);
+        if(data.ok){
+            console.log('todo bien pues');
+        }
+        else{
+            console.log('híjole, yo creo que no se va a poder');
+        }
     }).then(myJson => { 
      //console.log("var myJson: ",myJson);
      return data;
