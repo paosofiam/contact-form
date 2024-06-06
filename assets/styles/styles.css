@@ -33,16 +33,20 @@
 .formCard__validation, .formCard__validation--email{
     display: none;
     color: var(--Red);
+    margin-bottom: 10px;
 }
 /*Validations Active*/
 .formCard__field--Empty .formCard__validation, .formCard__email--invalid .formCard__validation--email{
     display: block;
 }
+.formCard__field--Empty input, .formCard__field--Empty textarea, .formCard__email--invalid input{
+    border: solid 1px var(--Red);
+}
+
 /*Inputs*/
 .formCard__input, .formCard__option{
     min-width: 150px;
-    width: 100%;
-    
+    width: 100%;   
     display: flex;
     flex-direction: row;
     align-items: center;

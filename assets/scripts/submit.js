@@ -30,8 +30,9 @@ function submitMail(postData){
     },
         body: postData,
     }).then(function(data){
-        console.log(data);
+        //console.log(data);
         if(data.ok){
+            console.log('Success: '+data.status);
             modalSuccess();
         }
         else{

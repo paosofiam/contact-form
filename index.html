@@ -30,11 +30,11 @@
       </label>
       <div id="queryType" class="formCard__field formCard__field--fullLenght formCard__field--QueryType">
         <span class="formCard__tag formCard__field--fullLenght">Query Type<span class="formCard__required">*</span></span>
-        <label for="generalEnquiry" id="General_Enquiry" class="formCard__option" onclick="checkRadioBox()">
+        <label for="generalEnquiry" id="General_Enquiry" class="formCard__option" onclick="rejectRadio('queryType'); checkRadioBox();">
           <input type="radio" id="generalEnquiry" class="formCard__input--radio" name="queryType" value="General_Enquiry"/>
           <span>General Enquiry</span>
         </label>
-        <label for="supportRequest" id="Support_Request" class="formCard__option" onclick="checkRadioBox()">
+        <label for="supportRequest" id="Support_Request" class="formCard__option" onclick="rejectRadio('queryType'); checkRadioBox();">
           <input type="radio" id="supportRequest" class="formCard__input--radio" name="queryType" value="Support_Request"/>
           <span>Support Request</span>
         </label>
@@ -45,7 +45,7 @@
         <textarea name="" id="mMessage" class="formCard__input formCard__input--message" oninput="rejectTextField('mMessage')"></textarea>
         <span class="formCard__validation">This field is required</span>
       </label>
-      <label class="formCard__field formCard__field--fullLenght" for="consentCheck">
+      <label class="formCard__field formCard__field--fullLenght" for="consentCheck" onclick="rejectCheckbox('consentCheck')">
         <div class="formCard__field--check">
           <input type="checkbox" id="consentCheck" class="formCard__input--check" name=""/>
           <span>I consent to being contacted by the team<span class="formCard__required">*</span></span>
